@@ -8,44 +8,14 @@ namespace ConsoleApp3
 {
     public class Terrain
     {
-        private string fairway;
-        private string rough;
-        private string bunker;
-        private string bosque;
-
-        public Terrain(string fairway, string rough, string bunker, string bosque)
+        public string type;
+        public int p; //probabilidad de que caiga en ese terreno
+        public int p1; //1er num del intervalo de porcentaje de penalizacion
+        public int p2; //2do num del intervalo de porcentaje de penalizacion
+        public Terrain(string type, int p, int p1, int p2)
         {
-            Fairway = fairway;
-            Rough = rough;
-            Bunker = bunker;
-            Bosque = bosque;
+
         }
-
-        public string Fairway
-        {
-            get { return this.fairway; }
-            set { this.fairway = value; }
-        }
-
-        public string Rough
-        {
-            get { return this.rough; }
-            set { this.rough = value; }
-        }
-
-        public string Bunker
-        {
-            get { return this.bunker; }
-            set { this.bunker = value; }
-        }
-
-        public string Bosque
-        {
-            get { return this.bosque; }
-            set { this.bosque = value; }
-        }
-
-
     }
 
 }

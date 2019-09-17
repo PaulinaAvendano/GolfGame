@@ -44,7 +44,9 @@ namespace ConsoleApp3
             int rd = random.Next(club.Mult, 100);
             x = rd / 100;
             avance = club.Dist*x;
-            hits = hits + 1;
+            pos += avance;
+            hits += 1;
+
         }
     }
 }

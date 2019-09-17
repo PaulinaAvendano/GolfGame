@@ -39,6 +39,45 @@ namespace ConsoleApp3
             Player P3 = new Player("Felipito", 0, palos, 0);
             Player P4 = new Player("George", 0, palos, 0);
 
+            List<Player> players = new List<Player>();
+
+            Random random = new Random();
+            int num = random.Next(1, 5);
+
+            if (num==1)
+            {
+                players.Add(P1);
+            } else if (num==2)
+            {
+                players.Add(P1);
+                players.Add(P2);
+            } else if (num == 3)
+            {
+                players.Add(P1);
+                players.Add(P2);
+                players.Add(P3);
+            } else
+            {
+                players.Add(P1);
+                players.Add(P2);
+                players.Add(P3);
+                players.Add(P4);
+            };
+
+            List<Terrain> terrenos = new List<Terrain>();
+
+            Terrain fairway = new Terrain("fairway", 70, 100, 100);
+            Terrain rough = new Terrain("rough", 20, 60, 90);
+            Terrain bunker = new Terrain("bunker", 5, 0, 60);
+            Terrain bosque = new Terrain("bosque", 5, -20, 20);
+            terrenos.Add(fairway);
+            terrenos.Add(rough);
+            terrenos.Add(bunker);
+            terrenos.Add(bosque);
+
+            Hole hole = new Hole(terrenos);
+
+
         }
     }
 }
